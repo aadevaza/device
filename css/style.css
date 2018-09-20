@@ -1176,6 +1176,7 @@ iframe {
   line-height: 48px;
   margin-top: 37px;
   margin-bottom: 28px;
+  letter-spacing: 0.5px;
 }
 
 .catalog__header-list {
@@ -1560,8 +1561,18 @@ iframe {
 }
 
 .catalog-types__item {
-  margin-left: 48px;
+  margin-left: 50px;
   margin-top: 69px;
+}
+
+.catalog-types__item:nth-of-type(2n) {
+  margin-left: 42px;
+}
+
+.catalog-types__item:nth-of-type(3),
+.catalog-types__item:last-of-type {
+  margin-top: 45px;
+  margin-bottom: 12px;
 }
 
 .catalog-types__box {
@@ -1569,8 +1580,85 @@ iframe {
   justify-content: space-between;
 }
 
+.catalog-types__img {
+  margin-bottom: 28px;
+}
+
+
+.catalog-types__link {
+  font-weight: bold;
+}
+
+.catalog-types__item:nth-of-type(2n) .catalog-types__link {
+  width: 220px;
+}
+
+.catalog-types__text {
+  margin: 0;
+}
+
+
 .filter {
   width: 290px;
   margin-left: 60px;
   background-color: #eeeeee;
+}
+
+/*Пагинация*/
+
+.paginator {
+  margin-bottom: 58px;
+}
+
+.paginator__list {
+  position: relative;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 760px;
+  min-height: 20px;
+  margin-left: 50px;
+  padding: 0;
+  padding: 25px 125px;
+  background-color: #ebebeb;
+
+}
+
+.paginator__item a {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  display: inline-block;
+}
+
+.paginator__item {
+  margin-right: 12px;
+  margin-left: 12px;
+}
+
+.paginator__item--next,
+.paginator__item--back {
+  position: absolute;
+  width: 130px;
+  height: 72px;
+  margin: 0;
+  top: 0;
+}
+
+.paginator__item--next {
+  right: 0px;
+}
+
+.paginator__item--back {
+  left: 5px;
+}
+
+
+.paginator__item--next a,
+.paginator__item--back a {
+  padding: 25px 20px;
+  width: 130px;
 }
