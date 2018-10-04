@@ -1014,25 +1014,42 @@ iframe {
 }
 
 .address {
-	margin-top: 34px;
+	margin-top: 52px;
 	width: 360px;
 }
 
-.address__title {
+.address__title a{
 	font-size: 48px;
 	color: #ffc600;
 	position: relative;
-	margin-bottom: 34px;
 }
 
-.address__title::after {
-	content: "";
-	width: 80px;
-	height: 7px;
-	background-color: #ffc600;
-	position: absolute;
-	top: 165px;
-	left: 0;
+.address__title {
+	margin-bottom: 27px;
+}
+
+
+.address__title:hover a {
+    opacity: 0.6;
+}
+
+.address__title:active a {
+    opacity: 0.3;
+}
+
+.address__text {
+    position: relative;
+	letter-spacing: -0.2px;
+}
+
+.address__text::before {
+    content: "";
+    width: 80px;
+    height: 7px;
+    background-color: #ffc600;
+    position: absolute;
+    top: 105px;
+    left: 0;
 }
 
 .footer-navigation__text,
@@ -1337,7 +1354,7 @@ iframe {
 }
 
 .filter__box:nth-of-type(2) {
-	margin-top: 20px;
+	margin-top: 22px;
 }
 
 .filter__title {
@@ -1345,7 +1362,7 @@ iframe {
 	font-weight: bold;
 	width: 205px;
 	border-top: 2px solid black;
-	padding-top: 12px;
+	padding-top: 10px;
 }
 
 .filter__range-scale {
@@ -1422,7 +1439,7 @@ iframe {
 
 .filter__option {
 	list-style: none;
-	margin-top: 0;
+	margin-top: 4px;
 }
 
 .filter__option-checkbox label {
@@ -1535,13 +1552,15 @@ iframe {
 	display: inline-block;
 	padding: 9px 5px;
 	font-size: 18px;
-	font-family: "gilroyextrabold", "arial", sans-serif;
+	font-family: "gilroy", "arial", sans-serif;
+    font-weight: bold;
 	vertical-align: top;
 	text-align: center;
 	color: #000;
 	text-transform: uppercase;
 	text-decoration: none;
 	letter-spacing: 3.6px;
+	margin-left: 20px;
 }
 
 .filter-button::before {
@@ -1610,6 +1629,32 @@ iframe {
 
 .catalog-types__text {
 	margin: 0;
+}
+
+.catalog-types__item--new {
+	position: relative;
+}
+
+.catalog-types__item--new::before {
+	content: "";
+	z-index: 111;
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	border: 2px solid #bfbfbf;
+	border-radius: 50%;
+	top: 30px;
+	right: 27px;
+}
+
+.catalog-types__item--new::after{
+	content: "NEW";
+	position: absolute;
+	top: 48px;
+	right: 40px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #bfbfbf;
 }
 
 .filter {
